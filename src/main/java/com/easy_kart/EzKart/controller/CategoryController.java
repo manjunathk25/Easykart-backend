@@ -34,7 +34,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("/admin/categories/{id}")
-    public ResponseEntity<String> addCategory(@PathVariable Long id){
+    public ResponseEntity<String> deleteCategory(@PathVariable Long id){
         try{
             String status = categoryService.deleteCategory(id);
             return ResponseEntity.status(HttpStatus.OK).body(status);
